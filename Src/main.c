@@ -100,8 +100,6 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  led_init();
-
   uint8_t angle = 0;
   const uint8_t angle_difference = 11;
 
@@ -117,7 +115,7 @@ int main(void)
 
   	for(uint8_t i = 0; i < 8; i++) {
 			// Calculate color
-			uint32_t rgb_color = hsl_to_rgb(angle + (i * angle_difference), 255, 3);
+			uint32_t rgb_color = hsl_to_rgb(angle + (i * angle_difference), 255, 127);
 			// Set color
 			led_set_RGB(i, (rgb_color >> 16) & 0xFF, (rgb_color >> 8) & 0xFF, rgb_color & 0xFF);
 		}
@@ -125,7 +123,7 @@ int main(void)
   	++angle;
 		led_render();
 		// Some delay
-		HAL_Delay(30);
+		HAL_Delay(1);
   }
   /* USER CODE END 3 */
 }
