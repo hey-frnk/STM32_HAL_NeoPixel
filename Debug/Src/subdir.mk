@@ -33,7 +33,7 @@ Src/%.o: ../Src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
-	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DUSE_HAL_DRIVER -DSTM32F042x6 -I"/Users/HARDWARECOP/Documents/CCPP/STM32_Digital_RGBW_LED/Inc" -I"/Users/HARDWARECOP/Documents/CCPP/STM32_Digital_RGBW_LED/Drivers/STM32F0xx_HAL_Driver/Inc" -I"/Users/HARDWARECOP/Documents/CCPP/STM32_Digital_RGBW_LED/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"/Users/HARDWARECOP/Documents/CCPP/STM32_Digital_RGBW_LED/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"/Users/HARDWARECOP/Documents/CCPP/STM32_Digital_RGBW_LED/Drivers/CMSIS/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DUSE_HAL_DRIVER -DSTM32F042x6 -I"/Users/HARDWARECOP/Documents/GitHub/STM32_HAL_NeoPixel/Inc" -I"/Users/HARDWARECOP/Documents/GitHub/STM32_HAL_NeoPixel/Drivers/STM32F0xx_HAL_Driver/Inc" -I"/Users/HARDWARECOP/Documents/GitHub/STM32_HAL_NeoPixel/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy" -I"/Users/HARDWARECOP/Documents/GitHub/STM32_HAL_NeoPixel/Drivers/CMSIS/Device/ST/STM32F0xx/Include" -I"/Users/HARDWARECOP/Documents/GitHub/STM32_HAL_NeoPixel/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

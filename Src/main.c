@@ -112,8 +112,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-  	for(uint8_t i = 0; i < 8; i++) {
+  	// Demo code for 8 LEDs
+  	for(uint8_t i = 0; i < 8 /* Change that to your amount of LEDs */; i++) {
 			// Calculate color
 			uint32_t rgb_color = hsl_to_rgb(angle + (i * angle_difference), 255, 127);
 			// Set color
@@ -123,7 +123,7 @@ int main(void)
   	++angle;
 		led_render();
 		// Some delay
-		HAL_Delay(1);
+		HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
